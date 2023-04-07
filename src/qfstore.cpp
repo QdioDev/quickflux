@@ -125,7 +125,7 @@ QFStore::QFStore(QObject *parent) : QObject(parent) , m_filterFunctionEnabled(fa
 
 QQmlListProperty<QObject> QFStore::children()
 {
-    return QQmlListProperty<QObject>(qobject_cast<QObject*>(this), m_children);
+	return QQmlListProperty<QObject>(qobject_cast<QObject*>(this), &m_children);
 }
 
 void QFStore::dispatch(QString type, QJSValue message)
@@ -245,9 +245,8 @@ void QFStore::setup()
 
 QQmlListProperty<QObject> QFStore::redispatchTargets()
 {
-    return QQmlListProperty<QObject>(qobject_cast<QObject*>(this), m_redispatchTargets);
+	return QQmlListProperty<QObject>(qobject_cast<QObject*>(this), &m_redispatchTargets);
 }
-
 
 /*! \qmlproperty object Store::bindSource
  *
