@@ -2,4 +2,10 @@ TEMPLATE = subdirs
 
 CONFIG += ordered
 
-SUBDIRS +=  tests/quickfluxunittests
+SUBDIRS += libquickflux
+
+BuildTests {
+    AddAllTests {
+        SUBDIRS +=  tests/quickfluxunittests
+    }
+}
