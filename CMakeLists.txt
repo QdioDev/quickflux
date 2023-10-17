@@ -3,7 +3,7 @@
 # See examples/middleware for example
 #
 
-cmake_minimum_required(VERSION 3.0.0)
+cmake_minimum_required(VERSION 3.10)
 project(quickflux VERSION 1.1.3)
 
 option(quickflux_INSTALL "Enable the installation of targets." ON)
